@@ -39,7 +39,7 @@ class Dog
 
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     end
-    
+
   end
 
   def self.create(name, breed)
@@ -55,8 +55,6 @@ class Dog
   end
 
   def self.find_by_name(name)
-    # find the student in the database given a name
-    # return a new instance of the Student class
     sql = <<-SQL
       SELECT *
       FROM dogs
@@ -73,7 +71,7 @@ class Dog
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
-    
+
 
 
 end

@@ -31,7 +31,7 @@ class Dog
       self.update
     else
       sql = <<-SQL
-        INSERT INTO dogs (name, breed) 
+        INSERT INTO dogs (name, breed)
         VALUES (?, ?)
       SQL
 
@@ -43,7 +43,7 @@ class Dog
   end
 
   def self.create(name, breed)
-    student = Student.new(name, breed)
+    student = Dog.new(name, breed)
     student.save
   end
 

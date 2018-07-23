@@ -42,7 +42,7 @@ class Dog
     self
   end
 
-  def self.create(name:, breed:)
+  def self.create(attributes_hash)
     dog = Dog.new
     dog.save
     dog
